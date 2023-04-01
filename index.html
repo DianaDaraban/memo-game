@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <title>Memo Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="start">
+            <h2>Enjoy your memory game!</h2>
+            <button class="start-btn">START GAME</button>
+        </div>
+        
+        <div class="game">
+            <h3>Choose the level:</h3>
+            <div class="gameBoard"></div>
+        </div>
+        <div class="cards-board">
+            <div class="counters">
+                <div class="moves">
+                    <h4>Moves:</h4>
+                    <div class="move-counter">0</div>
+                </div>
+                <div class="time">
+                    <h4>Time:</h4>
+                    <div class="time-counter">0:0</div>
+                </div>
+                <button class="stop-btn">RESTART GAME</button>
+            </div>
+            <div class="white-board"></div>
+        </div>
+
+        <div class="end">
+            <h2>Game is over!</h2>
+            <div class="final-counters">
+                <div class="total-moves">
+                    <h4 class="final-scores">Total Moves:</h4>
+                    <div class="total-moves-num">0</div>
+                </div>
+                <div class="time">
+                    <h4 class="final-scores">Total Time:</h4>
+                    <div class="total-time">0:0</div>
+                </div>
+            </div>
+            <button class="restart-btn">RESTART GAME</button>
+        </div>
+    </div>
+</body>
+</html>

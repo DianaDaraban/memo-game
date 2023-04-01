@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+--textFonts: 'Josefin Sans', sans-serif;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.container{
+    position: absolute;
+    z-index: 10000;
+}
+
+.start, .end{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/beach1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    position: absolute;
+}
+
+.end{
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    gap:1.5em;
+}
+
+h2, h3{
+    font-family: var(--textFonts);
+    font-size: 5rem;
+    font-weight: 300;
+    color: rgb(12, 43, 46);
+    text-shadow: 0px 2px 4px rgba(20, 64, 75, 0.222);
+}
+
+.start-btn {
+    border: none;
+    background-color: rgba(5, 36, 46, 0.685);
+    color: aliceblue;
+    padding: 0.4em 0.6em 0.2em 0.6em;
+    font-size: 3rem;
+    font-family: var(--textFonts);
+    border-radius: 5px;
+    text-shadow: 0px 2px 4px rgba(20, 64, 75, 0.322);
+    outline: 1px solid rgba(12, 43, 46, 0.692);;
+    outline-offset: 3px;
+}
+
+.start-btn:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: rgba(5, 36, 46, 0.785);
+}
+
+.start-btn:active {
+box-shadow: rgba(50, 50, 93, 0.55) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
+transform: scale(0.98, 0.98);
+transition: all 0.07s;
+background-color: rgba(5, 36, 46, 0.885);
+}
+
+.stop-btn{
+    font-size: 1.5rem;
+    align-self: flex-end;
+    background-color: aliceblue;
+    color: rgb(12, 43, 46);
+    padding: 0.4em 0.6em 0.2em 0.6em;
+    font-family: var(--textFonts);
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(50, 50, 93, 0.4) 0px 4px 10px -14px inset, rgba(0, 0, 0, 0.4) 0px 10px 10px -10px inset;
+
+}
+
+.stop-btn:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: rgba(5, 36, 46, 0.485);
+    color: aliceblue;
+}
+
+.stop-btn:active{
+box-shadow: rgba(50, 50, 93, 0.55) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
+transform: scale(0.98, 0.98);
+transition: all 0.07s;
+background-color: rgba(5, 36, 46, 0.885);
+}
+
+.restart-btn {
+    border: none;
+    background-color: rgba(5, 36, 46, 0.685);
+    color: aliceblue;
+    padding: 0.4em 0.6em 0.2em 0.6em;
+    font-size: 2.2rem;
+    font-family: var(--textFonts);
+    border-radius: 5px;
+    text-shadow: 0px 2px 4px rgba(20, 64, 75, 0.322);
+    outline: 1px solid rgba(12, 43, 46, 0.692);;
+    outline-offset: 3px;
+}
+
+.restart-btn:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: rgba(5, 36, 46, 0.785);
+}
+
+.restart-btn:active {
+box-shadow: rgba(50, 50, 93, 0.55) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
+transform: scale(0.98, 0.98);
+transition: all 0.07s;
+background-color: rgba(5, 36, 46, 0.885);
+}
+
+.game{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/beach2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    z-index: -100;
+}
+
+.game-btn{
+        border: none;
+    background-color: rgba(5, 36, 46, 0.785);
+    color: aliceblue;
+    padding: 0.4em 1em 0.4em 1em;
+    font-size: 3rem;
+    font-family: var(--textFonts);
+    border-radius: 5px;
+    text-shadow: 0px 2px 4px rgba(20, 64, 75, 0.322);
+    outline: 1px solid rgba(12, 43, 46, 0.692);;
+    outline-offset: 3px;
+    z-index: 10;
+}
+
+.gameBoard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+h3{
+    background-color: rgba(240, 248, 255, 0.5);
+    padding: 0.2em 1.05em 0 1.05em;
+    border-radius: 5px;
+}
+
+.cards-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: max-content;
+    min-height: 100vh;
+    background-image: url(./img/beach2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    z-index: -90;
+    padding: 1em;
+}
+
+.white-board{
+    width: max-content;
+    height: max-content;
+    background-color: rgba(240, 248, 255, 0.664);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    z-index: -50;
+    perspective: 1000px;
+}
+
+.counters, .final-counters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+
+.move-counter, .time-counter, .total-moves-num, .total-time{
+    width: 5.5em;
+    border: none;
+    background-color: rgba(233, 238, 237, 0.918);
+    color: rgb(15, 55, 56);
+    padding: 0.4em 1em 0.4em 1em;
+    font-family: var(--textFonts);
+    border-radius: 2px;
+    box-shadow: rgba(50, 50, 93, 0.4) 0px 4px 10px -14px inset, rgba(0, 0, 0, 0.4) 0px 10px 10px -10px inset;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.total-moves-num, .total-time{
+    width: 7em;
+    box-shadow: rgba(12, 12, 24, 0.95) 0px 4px 4px 10px -15px inset, rgba(0, 0, 0, 0.95) 0px 4px 4px 10px -15px inset;
+    border: 1px solid rgba(12, 12, 24, 0.25);
+}
+
+h4{
+    font-family: var(--textFonts);
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: rgb(199, 245, 248);
+    text-shadow: 0px 2px 4px rgba(20, 64, 75, 0.8);
+    padding-bottom: 0.2em;
+}
+
+.final-scores {
+    color: rgb(12, 43, 46);
+    text-shadow: 0px 2px 4px rgba(20, 64, 75, 0.2);
+}
+
+.cards{
+    width: 12em;
+    height: 12em;
+    background-color: rgb(48, 45, 45);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 8px;
+    z-index: 500;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+    transform: scale(1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards:active{
+    transform: scale(.97);
+    transition: transform 0.2s;
+}
+
+.cards.flip {
+    transform: rotateY(180deg);
+}
+
+
+
+.back-face {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.front-face{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
